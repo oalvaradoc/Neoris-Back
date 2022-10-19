@@ -1,0 +1,30 @@
+04-13 05:14:01 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "CREATE TABLE MIDATABASE PERSONAS[*] (
+  ID INT(11) NOT NULL,
+  NAME VARCHAR(255) NOT NULL,
+  APELLIDOS VARCHAR(255) NOT NULL,
+  PROCESADO BIT(1) NOT NULL
+) "
+Syntax error in SQL statement "CREATE TABLE MIDATABASE PERSONAS[*] (
+  ID INT(11) NOT NULL,
+  NAME VARCHAR(255) NOT NULL,
+  APELLIDOS VARCHAR(255) NOT NULL,
+  PROCESADO BIT(1) NOT NULL
+) "; SQL statement:
+CREATE TABLE MIDATABASE personas (
+  id int(11) NOT NULL,
+  name varchar(255) NOT NULL,
+  apellidos varchar(255) NOT NULL,
+  Procesado bit(1) NOT NULL
+) [42000-170]
+04-13 05:14:55 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "TABLE" no encontrada
+Table "TABLE" not found; SQL statement:
+DELETE TABLE PERSONAS [42102-170]
+04-13 05:16:12 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Error de Sintaxis en sentencia SQL "INSERT INTO MIDATABASE.PERSONAS (ID, NAME, APELLIDOS, PROCESADO) VALUES
+(1, 'Usuario 010', 'Alvarados', B'1'[*]), "; se esperaba "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"
+Syntax error in SQL statement "INSERT INTO MIDATABASE.PERSONAS (ID, NAME, APELLIDOS, PROCESADO) VALUES
+(1, 'Usuario 010', 'Alvarados', B'1'[*]), "; expected "., (, [, ::, *, /, %, +, -, ||, ~, !~, NOT, LIKE, REGEXP, IS, IN, BETWEEN, AND, OR, ,, )"; SQL statement:
+INSERT INTO MIDATABASE.personas (id, name, apellidos, Procesado) VALUES
+(1, 'Usuario 010', 'Alvarados', b'1'), [42001-170]
